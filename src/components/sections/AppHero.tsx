@@ -39,13 +39,13 @@ export default function AppHero({
 					<StoreButton
 						store="apple"
 						href={storeLinks.apple}
-						label="Download on the"
+						label="Descargar en"
 						storeName="App Store"
 					/>
 					<StoreButton
 						store="google"
 						href={storeLinks.google}
-						label="Get it on"
+						label="Consíguelo en"
 						storeName="Google Play"
 					/>
 				</div>

@@ -10,7 +10,7 @@ export default function Screenshots({ images }: ScreenshotsProps) {
 	return (
 		<div className="mb-16">
 			<div className="mb-6 flex items-center justify-between">
-				<h2 className="text-2xl font-semibold">Screenshots</h2>
+				<h2 className="text-2xl font-semibold">Capturas de Pantalla</h2>
 				<DeviceToggle activeDevice={activeDevice} onToggle={setActiveDevice} />
 			</div>
 			<div

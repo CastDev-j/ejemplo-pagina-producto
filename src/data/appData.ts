@@ -7,61 +7,64 @@ import {
 } from "react-icons/ri";
 
 export const appData: AppData = {
-	title: "Your App Name",
+	title: "Nombre de la aplicación",
 	description:
-		"Here you can write a brief description of your application. Tell users about its main features and benefits in 1-2 sentences.",
+		"Descripción de la aplicación. Describe tu aplicación aquí. ¿Qué hace? ¿Por qué es especial?",
 	logo: {
 		type: "iframe",
 		src: "https://api.bohd4n.me/embed/d92TevY2lQhnQnC/emoji1",
 	},
 	screenshots: {
 		iphone: [
-			"screenshots/iphone/1.png",
-			"screenshots/iphone/2.png",
-			"screenshots/iphone/3.png",
-			// ...more Iphone screenshotsa
+			"screenshots/iphone/iphone-01.webp",
+			"screenshots/iphone/iphone-02.webp",
+			"screenshots/iphone/iphone-03.webp",
+			"screenshots/iphone/iphone-04.webp",
+			"screenshots/iphone/iphone-05.webp",
+			// ...más capturas de pantalla de iPhone
 		],
 		ipad: [
-			"screenshots/ipad/1.png",
-			"screenshots/ipad/2.png",
-			"screenshots/ipad/3.png",
-			// ...more iPad screenshots
+			"screenshots/ipad/tablet-01.webp",
+			"screenshots/ipad/tablet-02.webp",
+			"screenshots/ipad/tablet-03.webp",
+
+			// ...más capturas de pantalla de iPad
 		],
 	},
 	features: [
 		{
-			title: "Main Feature",
-			description: "Describe your main feature here. What makes it special?",
+			title: "Característica Principal",
+			description: "Describe la característica principal de tu aplicación aquí.",
 			icon: FiStar,
 		},
 		{
-			title: "Another Feature",
-			description: "What else can your app do? Tell users about it here.",
+			title: "Otra Característica",
+			description: "¿Qué más puede hacer tu aplicación? Cuéntaselo a los usuarios aquí.",
 			icon: FiZap,
 		},
 		{
-			title: "One More Feature",
-			description: "Add another key feature of your application here.",
+			title: "Una Característica Más",
+			description: "Añade otra característica clave de tu aplicación aquí.",
 			icon: FiBox,
 		},
 	],
 	faqs: [
 		{
-			question: "Question 1?",
-			answer: "Answer to question 1 goes here.",
+			question: "¿Pregunta 1?",
+			answer: "La respuesta a la pregunta 1 va aquí.",
 		},
 		{
-			question: "Question 2?",
-			answer: "Answer to question 2 goes here.",
+			question: "¿Pregunta 2?",
+			answer: "La respuesta a la pregunta 2 va aquí.",
 		},
 		{
-			question: "Question 3?",
-			answer: "Answer to question 3 goes here.",
+			question: "¿Pregunta 3?",
+			answer: "La respuesta a la pregunta 3 va aquí.",
 		},
 	],
 	storeLinks: {
-		apple: "#", // Replace with your App Store link
-		google: "#", // Replace with your Google Play link
+		apple: "#", // Reemplaza con tu enlace de App Store
+		google: "#", // Reemplaza con tu enlace de Google Play
 	},
 	socialLinks: [
 		{

@@ -3,7 +3,7 @@ import type { FAQProps } from "types/app";
 export default function FAQ({ items }: FAQProps) {
 	return (
 		<div className="mb-16">
-			<h2 className="mb-6 text-2xl font-semibold">FAQ</h2>
+			<h2 className="mb-6 text-2xl font-semibold">Preguntas Frecuentes</h2>
 			<div className="space-y-4">
 				{items.map((item) => (
 					<div
@@ -20,7 +20,7 @@ export default function FAQ({ items }: FAQProps) {
 									stroke="currentColor"
 									aria-label="Toggle answer"
 								>
-									<title>Toggle answer</title>
+									<title>Cambiar respuesta</title>
 									<path
 										strokeLinecap="round"
 										strokeLinejoin="round"
