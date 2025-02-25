@@ -1,0 +1,52 @@
+---
+import PageAnimation from "@components/ui/PageAnimation";
+import Footer from "@components/sections/Footer";
+import GithubCorner from "@components/ui/GithubCorner";
+export interface Props {
+	title: string;
+	description?: string;
+	showFooter?: boolean;
+}
+
+const { title, description } = Astro.props;
+const { showFooter = true } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    {
+      description && (
+        <>
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
+        </>
+      )
+    }
+    <meta name="theme-color" content="#000000" />
+    <title>{title}</title>
+    <script>
+      history.scrollRestoration = "manual";
+      window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </head>
+  <body class="bg-black font-sans text-white">
+    <GithubCorner href="https://github.com/bohd4nx/mobile-landing-page" />
+    <div class="mx-auto min-h-screen max-w-[800px]">
+      <PageAnimation client:load>
+        <main>
+          <slot />
+        </main>
+        {showFooter && <Footer />}
+      </PageAnimation>
+    </div>
+  </body>
+</html>

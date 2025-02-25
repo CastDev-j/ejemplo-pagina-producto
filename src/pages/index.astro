@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import AppHero from "@components/sections/AppHero";
+import Screenshots from "@components/sections/Screenshots";
+import Features from "@components/sections/Features";
+import FAQ from "@components/sections/FAQ";
+import Lightbox from "@components/ui/Lightbox";
+import SocialLinks from "@components/social/SocialLinks";
+import { appData } from "../data/appData";
+
+const { title, description, screenshots, features, faqs, storeLinks, socialLinks, logo } = appData;
+---
+
+<Layout title={title} description={description}>
+  <main class="min-h-screen max-w-5xl mx-auto px-4 py-8">
+    <AppHero title={title} description={description} storeLinks={storeLinks} logo={logo} />
+    
+    <div class="mb-16">
+      <Screenshots images={screenshots} client:load />
+    </div>
+
+    <Features features={features} />
+    <FAQ items={faqs} />
+    <SocialLinks links={socialLinks} />
+  </main>
+</Layout>
+
+<Lightbox images={screenshots} client:load />
+
+<style is:global>
+  .screenshots-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .screenshots-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-progress {
+    width: var(--scroll-width, 0%);
+    transition: width 0.1s ease-out;
+  }
+
+  .store-button {
+    backdrop-filter: blur(8px);
+  }
+
+  .store-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px -4px rgba(255, 255, 255, 0.05);
+  }
+
+  .store-button:active {
+    transform: translateY(0);
+  }
+</style>

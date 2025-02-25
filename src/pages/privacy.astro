@@ -1,0 +1,36 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Breadcrumbs from "@components/ui/Breadcrumbs";
+import { marked } from "marked";
+
+const privacyContent = await Astro.glob("./content/privacy.md");
+const htmlContent = marked(privacyContent[0].rawContent());
+---
+
+<Layout title="Privacy Policy" description="Privacy Policy for the application">
+  <main class="min-h-screen max-w-3xl mx-auto px-4 py-8">
+    <Breadcrumbs 
+      items={[{ label: "Privacy Policy" }]}
+    />
+    
+    <div class="prose prose-invert prose-sm sm:prose-base max-w-none">
+      <div set:html={htmlContent} />
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  .prose {
+    --tw-prose-invert-headings: theme(colors.white);
+    --tw-prose-invert-links: theme(colors.blue.400);
+    --tw-prose-invert-bold: theme(colors.white);
+  }
+  
+  .prose a {
+    text-decoration: none;
+  }
+  
+  .prose a:hover {
+    text-decoration: underline;
+  }
+</style>
